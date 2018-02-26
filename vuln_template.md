@@ -1,4 +1,4 @@
-|   persu   |               |       |
+|persu|||
 |:--------:|---------------|------:|
 | col 1 is |  left-aligned | $1600 |
 | col 2 is |    centered   |   $12 |
