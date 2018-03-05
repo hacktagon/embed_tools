@@ -13,3 +13,9 @@ File name : gdbserver.[mips,arm,i686][bigendian, littlendian]
 
 ### tcpdump banaries multiarch
 File name : tcpdump.[mips,arm][bigendian, littlendian]
+
+### Multiarch Decompiler
+Retdec
+
+URL : https://retdec.com/decompilation/
+Python SDK : https://github.com/s3rvac/retdec-python
