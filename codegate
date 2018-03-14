@@ -1,0 +1,88 @@
+#### Title : IoT 허브 취약점 분석을 통한 홈 IoT 서비스 보안 위협과 대응방안
+
+#### 개요
+```
+홈 IoT 서비스에서 IoT 허브는 사용자와 집 안의 각종 Things를 연결하는 중요한 디바이스이다.
+이러한 허브의 보안 위협은 무엇이며, 안전하게 구성되어 있을까?
+
+본 발표는 왜 홈 IoT 환경에서 IoT 허브를 타겟으로 정했는지, IoT 환경에서 IoT 허브의 역할과 특징을 통해 중요성을 알아본다.
+그리고 연구를 통해 발견된 다양한 IoT 허브의 취약점에 대해 분석 과정과 관련 이슈에 대해 설명하고, 홈 IoT 서비스에서 일어날 수 있는 위협 시나리오에 대해 발표한다.
+
+마지막으로, IoT 허브를 비롯한 홈 IoT 환경에서의 고려해야할 보안 요소는 무엇이며, 어떻게 해결해야 하는지 얘기해 본다.
+```
+
+#### 0. 소개
++ 이휘원
++ 박창현
++ Hacktagon
+
+#### 1. 홈 IoT
+서비스 구성도
+
+#### 2. 허브의 역할
++ 사용자와 소형 디바이스의 연결 매체 : Z-wave, BLE, zigbee
+
+#### 3. 허브의 특징
++ 특징 사용자 웹 페이지가 존재 : Attack Vector
+
+#### 4. 허브를 타켓으로 선정한 이유
++ 홈iot 공격은 무선 공격이나, things 공격을 많이들 예상하는데 실제로 z-wave, wifi 같은 경우는 어려움이 존재
++ kisa 특별 신고 기간
++ have special some things
+
+#### 5. Target 허브 Info
++ 국내 통신사 : 3 (KT, SKT, LGU+)
++ 국내 IoT 서비스 제공 업체 : 2 (Rayhome, nemoan)
+
+```
+우리는 국내 다양한 허브 중 5개에 대해 선정하여, 취약점 연구를 진행함
+```
+
+#### 6. Target 허브 위협 모델링
++ 위협 모델링이 가능할까?
+
+#### 7. 허브 vuln 결과
+| vuln             | K | S | U | R | N |
+|------------------|---|---|---|---|---|
+| SBOF             | O |   |   |   | O |
+| CMDI             | O |   |   | O | O |
+| Auth Bypass      | O | O |   | O | O |
+| Default Password | O | O |   | O | O |
+
+
+#### 8. 분석 내용
++ 펌웨어
+ + UART :
+ + U-BooT의 미학 :
+ + Provisioning :
+
++ 패스워드
+ + init > rcS
+ + busybox
+ + etc binary
+
++ attack vector
+ + open port
+  
+
+#### 시나리오
++ 비 인가자를 통한 z-wave Things 제어
++ Things의 PDOS화
++ TR-069 등 서버 통신을 커스텀마이징화
++ Attack Tool로 사용
++ IoT BoT net
++ 마이닝툴
+
+
+####
++ TR-069 : http://kimstar.kr/3136/
+
+#### 허브별 비교
+|                  | K | S | U | R | N |
+|------------------|---|---|---|---|---|
+| UART             | O |   |   |   | O |
+| Default Account  | O |   |   | O | O |
+| Remote Control   | O | O |   | O | O |
+| Mitigation       | O | O |   | O | O |
+| Web              | O | O |   | O | O |
+| App Permission   | O | O |   | O | O |
